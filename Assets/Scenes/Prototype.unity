@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &22418073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,8 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc20d21aba24752448bc55e158e78a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseMovement
-  baseMaxSpeed: 10
-  acceleration: 25
+  maxSpeed: 20
+  accelerationFactor: 5
 --- !u!54 &22418074
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -605,7 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 8a3ba1555a0b9954e8ad0f84fd8707d5, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -619,7 +619,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -660,9 +660,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1d90fdeecaa94458727a178be2cf6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WasdMovement
-  moveSpeed: 5
-  gravity: -9.81
-  transitionDuration: 1
+  maxSpeed: 15
+  minimumSpeedMultipler: 0.1
+  keyUpDecelerationType: 1
+  bUseCounterDeceleration: 0
+  counterDecelerationMultiplier: 2
 --- !u!135 &424093208
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -776,7 +778,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1090633569
 MonoBehaviour:
   m_ObjectHideFlags: 0
